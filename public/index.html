@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/import.css">
+	<!-- add in font-awesome for useful icons http://fontawesome.io/-->
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<title>Test App</title>
+</head>
+<body ng-cloak>
+	<header>
+		<div ui-view="nav"></div>
+	</header>
+	<section ui-view="body"></section>
+	<!-- kickstart the app, data-main="main" refers to main.js -->
+	<script data-main="main" src="libs/requirejs/require.js"></script>
+</body>
+</html>

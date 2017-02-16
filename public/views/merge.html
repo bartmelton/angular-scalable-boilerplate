@@ -1,0 +1,238 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			<article class="panel panel-default">
+				<div class="panel-heading"><h3 class="panel-title">Create a new hero by merging 2 others.</h3></div>
+				<div class="panel-body">
+					<p class="lead">Select 2 heroes which you would like to merge to create your new hero</p>
+					<div ng-show="heroCreated" class="well success text-success clearfix">
+						<p><strong>{{newHero.hero_name}}</strong> has been saved successfully.</p>
+						<button class="btn btn-primary pull-right" ng-click="createAnother()">Create Another</button>
+					</div>
+					<div ng-show="!heroCreated">
+						<form class="form-inline">
+							<table class="table">
+								<thead>
+									<tr>
+										<th></th>
+										<th>Hero 1</th>
+										<th>Hero 2</th>
+										<th>Your Hero</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>Hero Name</th>
+										<td>
+											<select ng-model="hero1" ng-options="hero as hero.hero_name for hero in heroes"></select>
+										</td>
+										<td>
+											<select ng-model="hero2" ng-options="hero as hero.hero_name disable when hero==hero1 for hero in heroes"></select>
+										</td>
+										<td><input type="text" ng-model="newHero.hero_name"></td>
+									</tr>
+									<tr>
+										<th>Real Name</th>
+										<td>
+											{{hero1.real_name}}
+										</td>
+										<td>
+											{{hero2.real_name}}
+										</td>
+										<td><input type="text" ng-model="newHero.real_name"></td>
+									</tr>
+									<tr>
+										<th>Gender</th>
+										<td>
+											{{hero1.gender}}
+										</td>
+										<td>
+											{{hero2.gender}}
+										</td>
+										<td>
+											<select ng-model="newHero.gender">
+												<option value="Female">Female</option>
+												<option value="Male">Male</option>
+											</select>
+										</td>
+									</tr>
+								</tbody>
+								<tbody ng-show="showAttributes">
+									<tr>
+										<th colspan="4" class="text-center">Attributes</th>
+									</tr>
+									<tr>
+										<th>Intelligence</th>
+										<td>
+											<div class="form-group pull-right m-20-r">
+												<label>
+													{{hero1.attributes.intelligence}}
+													<input type="radio" value="{{hero1.attributes.intelligence}}" ng-model="newHero.attributes.intelligence">
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="form-group m-20-l">
+												<label>
+													<input type="radio" value="{{hero2.attributes.intelligence}}" ng-model="newHero.attributes.intelligence">
+													{{hero2.attributes.intelligence}}
+												</label>
+											</div>
+										</td>
+										<td>{{newHero.attributes.intelligence}}</td>
+									</tr>
+									<tr>
+										<th>Strength</th>
+										<td>
+											<div class="form-group pull-right m-20-r">
+												<label>
+													{{hero1.attributes.strength}}
+													<input type="radio" value="{{hero1.attributes.strength}}" ng-model="newHero.attributes.strength">
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="form-group m-20-l">
+												<label>
+													<input type="radio" value="{{hero2.attributes.strength}}" ng-model="newHero.attributes.strength">
+													{{hero2.attributes.strength}}
+												</label>
+											</div>
+										</td>
+										<td>{{newHero.attributes.strength}}</td>
+									</tr>
+									<tr>
+										<th>Speed</th>
+										<td>
+											<div class="form-group pull-right m-20-r">
+												<label>
+													{{hero1.attributes.speed}}
+													<input type="radio" value="{{hero1.attributes.speed}}" ng-model="newHero.attributes.speed">
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="form-group m-20-l">
+												<label>
+													<input type="radio" value="{{hero2.attributes.speed}}" ng-model="newHero.attributes.speed">
+													{{hero2.attributes.speed}}
+												</label>
+											</div>
+										</td>
+										<td>{{newHero.attributes.speed}}</td>
+									</tr>
+									<tr>
+										<th>Durability</th>
+										<td>
+											<div class="form-group pull-right m-20-r">
+												<label>
+													{{hero1.attributes.durability}}
+													<input type="radio" value="{{hero1.attributes.durability}}" ng-model="newHero.attributes.durability">
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="form-group m-20-l">
+												<label>
+													<input type="radio" value="{{hero2.attributes.durability}}" ng-model="newHero.attributes.durability">
+													{{hero2.attributes.durability}}
+												</label>
+											</div>
+										</td>
+										<td>{{newHero.attributes.durability}}</td>
+									</tr>
+									<tr>
+										<th>Power</th>
+										<td>
+											<div class="form-group pull-right m-20-r">
+												<label>
+													{{hero1.attributes.power}}
+													<input type="radio" value="{{hero1.attributes.power}}" ng-model="newHero.attributes.power">
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="form-group m-20-l">
+												<label>
+													<input type="radio" value="{{hero2.attributes.power}}" ng-model="newHero.attributes.power">
+													{{hero2.attributes.power}}
+												</label>
+											</div>
+										</td>
+										<td>{{newHero.attributes.power}}</td>
+									</tr>
+									<tr>
+										<th>Combat</th>
+										<td>
+											<div class="form-group pull-right m-20-r">
+												<label>
+													{{hero1.attributes.combat}}
+													<input type="radio" value="{{hero1.attributes.combat}}" ng-model="newHero.attributes.combat">
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="form-group m-20-l">
+												<label>
+													<input type="radio" value="{{hero2.attributes.combat}}" ng-model="newHero.attributes.combat">
+													{{hero2.attributes.combat}}
+												</label>
+											</div>
+										</td>
+										<td>{{newHero.attributes.combat}}</td>
+									</tr>
+									<tr>
+										<th colspan="4" class="text-center">Powers (Select up to 5)</th>
+									</tr>
+									<tr>
+										<th></th>
+										<td>
+											<ul class="list-unstyled">
+												<li ng-repeat="power in hero1.powers">{{power}}</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-unstyled">
+												<li ng-repeat="power in hero2.powers">{{power}}</li>
+											</ul>
+										</td>
+										<td>
+											<select id="newPowersSelect" ng-model="newHero.powers" multiple size="10" ng-options="power as power for power in availablePowers" ng-change="limitPowers()"></select>
+										</td>
+									</tr>
+									<tr>
+										<th colspan="4">Weaknesses (Inherit all)</th>
+									</tr>
+									<tr>
+										<th></th>
+										<td>
+											<ul class="list-unstyled">
+												<li ng-repeat="weak in hero1.weaknesses">{{weak}}</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-unstyled">
+												<li ng-repeat="weak in hero2.weaknesses">{{weak}}</li>
+											</ul>
+										</td>
+										<td>
+											<ul class="list-unstyled">
+												<li ng-repeat="weak in newHero.weaknesses">{{weak}}</li>
+											</ul>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="well error" ng-show="creationError">
+								There was a problem saving <strong>{{newHero.hero_name}}</strong>. Please try again.
+							</div>
+							<div class="pull-right">
+								<button ng-disabled="!enableSave" class="btn btn-primary" ng-click="doSave()">Save {{newHero.hero_name}}</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</article>
+		</div>
+	</div>
+</div>

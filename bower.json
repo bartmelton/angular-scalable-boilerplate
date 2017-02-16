@@ -1,0 +1,36 @@
+{
+  "name": "angular-scalable-boilerplate",
+  "description": "A scalable boilerplate for AngularJS 1.x",
+  "version": "1.0.0",
+  "authors": [
+    "Bart Melton"
+  ],
+  "keywords": [
+    "angular",
+    "boilerplate",
+    "single-page",
+    "scalable",
+    "large-scale"
+  ],
+  "homepage": "https://github.com/bartmelton/angular-scalable-boilerplate",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bartmelton/angular-scalable-boilerplate.git"
+  },
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "requirejs": "2.1.x",
+    "angular": "1.6.x",
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.4",
+    "bootstrap": "^3.3.7",
+    "angular-bootstrap": "^2.5.0",
+    "angular-animate": "^1.6.1",
+    "angular-ui-router": "^0.4.2",
+    "angular-ui-router.stateHelper": "^1.3.1"
+  },
+  "resolutions": {
+    "angular-ui-router": "^0.4.2"
+  }
+}
