@@ -1,0 +1,27 @@
+{
+  "name": "angular-scalable-boilerplate",
+  "version": "1.0.0",
+  "description": "A scalable boilerplate for AngularJS 1.x using requirejs",
+  "main": "public/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+		"postinstall": "bower install"
+  },
+	"keywords": [
+    "angular",
+    "boilerplate",
+    "single-page",
+    "scalable",
+    "large-scale"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bartmelton/angular-scalable-boilerplate.git"
+  },
+  "author": "Bart Melton",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bartmelton/angular-scalable-boilerplate/issues"
+  },
+  "homepage": "https://github.com/bartmelton/angular-scalable-boilerplate#readme"
+}

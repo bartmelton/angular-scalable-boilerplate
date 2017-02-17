@@ -1,6 +1,6 @@
 {
   "name": "angular-scalable-boilerplate",
-  "description": "A scalable boilerplate for AngularJS 1.x",
+  "description": "A scalable boilerplate for AngularJS 1.x using requirejs",
   "version": "1.0.0",
   "authors": [
     "Bart Melton"
