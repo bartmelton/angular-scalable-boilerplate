@@ -1,4 +1,3 @@
 {
-	"cwd":"~/public",
-  "directory": "libs"
+	"directory": "public/libs"
 }
