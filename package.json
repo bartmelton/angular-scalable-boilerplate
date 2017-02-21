@@ -1,6 +1,6 @@
 {
   "name": "angular-scalable-boilerplate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A scalable boilerplate for AngularJS 1.x using requirejs",
   "main": "public/index.html",
   "scripts": {
