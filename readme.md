@@ -12,7 +12,7 @@ The site is built up by chaining "include" files using [RequireJS](http://requir
 There are some basic comments within the files explaining what things are doing and where to make changes. Of course, this is just an example of what can be done.  Everyone has their own preferences for file structure and site organization. If you look through the code for a few minutes, it should become fairly self-explanatory as to the basic principle of how to modularize your site for ease of management. From there, you can use it as a guide to set things up however you prefer.
 
 ### Structure
-The root is `/public/`. 
+The root is `/public/`.
  - `index.html` is the basic shell for the app
  - `main.js` has the configuration for `requirejs` and initializes the app.
  - `/css/` contains the CSS files. This setup only uses client-side technologies only, so change as needed for using Less/Sass.
@@ -32,7 +32,7 @@ The subsection structure
 
  - `/section/inc.js` used to require all of the JS files for the subsection.
  - `/section/routes.js` all of the routing for this section.
- - `/section/views/`, `/section/controllers/`, `/section/services/`, `/section/directives/` the .js and .html files specific to this subsection. 
+ - `/section/views/`, `/section/controllers/`, `/section/services/`, `/section/directives/` the .js and .html files specific to this subsection.
 
 
 The `inc.js` files are the key to keeping everything modular. When you add a new section, you just add a line pointing to its "include" file in the parent include file. If you move/add a section or change the folder name, you simply modify the parent `inc.js` to point to the location of the `inc.js` for the module.  You can continue to chain subsections by adding them the same way but within the section folder and including it's `inc.js` in the parent `inc.js`. Anything that is added/moved/renamed only requires a single line change in the parent `inc.js` (or 2 of moving from one parent structure to another).
@@ -61,10 +61,6 @@ The following are the angular plugins and other utilities included with the pack
 #### GitHub
 [https://github.com/bartmelton/angular-scalable-boilerplate](https://github.com/bartmelton/angular-scalable-boilerplate)
 
-#### Bower
- ```
-  bower install angular-scalable-boilerplate
- ```
 
 #### NPM
  ```
